@@ -53,14 +53,13 @@ class Rectangulo {
 
     // println(vx);
 
-    if (mouseX > 400) {
+    if (mouseX > 400 ) {
 
       if (vx < maxVx) {
 
-       // vx += maxVx/2;
-       
-       vx += maxVx/2;
-        
+        // vx += maxVx/2;
+
+        vx += maxVx/2;
       } else if (vx > maxVx) {
 
         maxVx = -(maxVx);
@@ -71,10 +70,9 @@ class Rectangulo {
       }
     } else if (mouseX < 200) {
 
-       if (vx > maxVx) {
+      if (vx > maxVx) {
 
         vx += maxVx/2;
-        
       } else if (vx < maxVx) {
 
         maxVx = -(maxVx);
@@ -83,12 +81,9 @@ class Rectangulo {
 
         vx += maxVx/2;
       }
-    }else{
-     
-      vx = maxVx/2;
-      
-      
-    }
+    } else {
 
+      vx = maxVx/2;
+    }
   }
 }

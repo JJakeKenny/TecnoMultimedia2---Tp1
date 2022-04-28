@@ -64,3 +64,20 @@ void draw() {
   println(rects[1].vx);
   println(rects[1].maxVx);
 }
+
+void mousePressed() {
+
+  for ( int i=0; i<rects.length; i++) {
+
+    if (i < cantRects/2) {
+      rects[i].vx = random(-9, 9);
+      rects[i].maxVx = rects[i].vx*2;
+    } else if (i < cantRects-1) {
+      rects[i].vx = random(-6, 6);
+      rects[i].maxVx = rects[i].vx*2;
+    } else {
+      rects[i].vx = random(-3, 3);
+      rects[i].maxVx = rects[i].vx*2;
+    }
+  }
+}
