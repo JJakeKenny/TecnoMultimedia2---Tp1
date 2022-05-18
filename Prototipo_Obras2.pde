@@ -20,11 +20,11 @@ void setup() {
   for ( int i=0; i<velocidades.length; i++) {
 
     if (i < cantRects/2) {
-      velocidades[i] = random(-9, 9);
+      velocidades[i] = random(7, 12);
     } else if (i < cantRects-1) {
-      velocidades[i] = random(-6, 6);
+      velocidades[i] = random(4, 6);
     } else {
-      velocidades[i] = random(-3, 3);
+      velocidades[i] = random(0, 3);
     }
   }
 
@@ -38,11 +38,11 @@ void setup() {
   for ( int i=0; i<rects.length; i++) {
 
     if (i < cantRects/2) {
-      rects[i] = new Rectangulo(random(0, height), random(0, width), velocidades[i], limitesV[i], random(50, 150), random(50, 100), i*(220/80)+50);
+      rects[i] = new Rectangulo(random(0, height), random(0, width), velocidades[i], limitesV[i], random(50, 150), random(50, 100), i*(220/80)+50, i);
     } else if (i < cantRects-1) {
-      rects[i] = new Rectangulo(random(0, height), random(0, width), velocidades[i], limitesV[i], random(150, 250), random(80, 150), i*(220/80));
+      rects[i] = new Rectangulo(random(0, height), random(0, width), velocidades[i], limitesV[i], random(150, 250), random(80, 150), i*(220/80), i);
     } else {
-      rects[i] = new Rectangulo(random(0, height), random(-50, 150), velocidades[i], limitesV[i], random(400, 700), random(200, 270), 255);
+      rects[i] = new Rectangulo(random(0, height), random(-50, 150), velocidades[i], limitesV[i], random(400, 700), random(200, 270), 255, i);
     }
   }
 
@@ -70,7 +70,7 @@ void mousePressed() {
   for ( int i=0; i<rects.length; i++) {
 
     if (i < cantRects/2) {
-      rects[i].vx = random(-9, 9);
+      rects[i].vx = random(-12, 12);
       rects[i].maxVx = rects[i].vx*2;
     } else if (i < cantRects-1) {
       rects[i].vx = random(-6, 6);
